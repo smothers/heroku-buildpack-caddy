@@ -34,6 +34,7 @@ if [ ! -f $CACHE_FILE ]; then
   tar xvf $BUILD_DIR/$CADDY_ARCHIVE -C $CADDY_EXTRACT_DIR | indent
 
   echo "-----> Caching Caddy"
+  mkdir -p $CACHE_DIR
   mv $CADDY_EXTRACT_DIR/$CADDY_FILE $CACHE_FILE
   rm -rf $CADDY_EXTRACT_DIR
 else
